@@ -34,6 +34,9 @@
   .pokemonCardWrapper:hover {
     box-shadow: none;
   }
+  .pokemonCardWrapper {
+    width: 160px;
+  }
 }
 .pokemonCardWrapper:hover {
   box-shadow: 5px 10px 10px rgba(47, 47, 47, 0.561);
