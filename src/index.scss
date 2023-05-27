@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root{
-    
+    margin: 10px;
     background-color: rgb(139, 64, 64);
 }
 
 .appContainer{
-    margin: 20px;
+    margin: 5px;
     font-family: 'Press Start 2P', cursive; 
     color: white;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
 
     h6{
         text-align: center;

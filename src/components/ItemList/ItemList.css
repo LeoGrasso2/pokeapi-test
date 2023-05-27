@@ -1,5 +1,12 @@
 .itemListContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1em;
+}
+@media (max-width: 500px) {
+  .itemListContainer {
+    margin: 0px;
+    gap: 0.5em;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 0.8fr));
+  }
 }/*# sourceMappingURL=ItemList.css.map */
