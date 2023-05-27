@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+:root {
+  background-color: rgb(139, 64, 64);
+}
+
+.appContainer {
+  margin: 20px;
+  font-family: "Press Start 2P", cursive;
+  color: white;
+}
+.appContainer h6 {
+  text-align: center;
+}
+.appContainer .appTitle {
+  text-align: center;
+}
+.appContainer .gh-link:visited {
+  color: white;
+}/*# sourceMappingURL=index.css.map */
