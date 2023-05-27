@@ -33,6 +33,12 @@
     }
 
 
+    @media (hover: none) {
+        &:hover {
+          box-shadow: none;
+        }
+    }
+    
     &:hover{
         box-shadow: 5px 10px 10px rgba(47, 47, 47, 0.561);
     }

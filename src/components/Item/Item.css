@@ -30,6 +30,11 @@
 .pokemonCardWrapper .pokemonCardContent .pokemonCardTitle {
   padding-bottom: 20px;
 }
+@media (hover: none) {
+  .pokemonCardWrapper:hover {
+    box-shadow: none;
+  }
+}
 .pokemonCardWrapper:hover {
   box-shadow: 5px 10px 10px rgba(47, 47, 47, 0.561);
 }/*# sourceMappingURL=Item.css.map */
