@@ -6,16 +6,34 @@ import './ItemList.css'
 
 const ItemList = () => {
 
+    const [pokeInfo, setPokeInfo] = useState()
+
+    useEffect(() => {
+        const fetchPokeAPI = async () => {
+            try{
+                const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/`)
+                setPokeInfo(res.data.results || {});
+            }
+            catch(err){
+                console.log(err)
+            }
+
+            
+        };
+
+        fetchPokeAPI();
+    }, [])
+
+
     const renderList = () => {
         const list = []
 
-        for(let i=1; i<=151; i++){
+        pokeInfo?.map((item, i) => {
+            console.log(item)
             list.push(
-                <div key={i}>
-                    <Item poke={i}></Item>
-                </div>
+                <Item key={i+1} id={i+1} poke={item}/>
             )
-        }
+            })
 
         return list;
     }
@@ -27,7 +45,5 @@ const ItemList = () => {
             </div>
         </>
     )
-    
 }
-
 export default ItemList

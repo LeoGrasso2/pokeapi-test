@@ -1,9 +1,7 @@
-import React, {useState, useEffect} from 'react'
-import axios from 'axios'
+import React from 'react'
 import './Item.css'
 
-const Item = ({poke}) => {
-    const [pokeInfo, setPokeInfo] = useState({})
+const Item = (data) => {
 
     const capFirstLetter = (word) => {
         if(word){
@@ -13,34 +11,16 @@ const Item = ({poke}) => {
         return "";
     }
     
-    const fetchPokeAPI = async (id) => {
-        try{
-            const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
-            setPokeInfo(res.data || {});
-        }
-        catch(err){
-            console.log(err)
-        }
-    }
- 
-    const getPokemonData = (id) => {
-        fetchPokeAPI(id);
-    }
-
-    useEffect(() => {
-        getPokemonData(poke);
-        if(pokeInfo.name="nidoran-f"){
-        }
-      }, []);
+    console.log(data)
 
     return(
-            <a className="pokemonCardWrapper" href={`https://www.wikidex.net/wiki/${pokeInfo.name !== 'nidoran-f' && pokeInfo.name !== 'nidoran-m' ? pokeInfo.name : 'nidoran'}`}>
-                <div className="pokemonCardId">#{pokeInfo.id}</div>
+            <a className="pokemonCardWrapper" href={`https://www.wikidex.net/wiki/${data.poke.name !== 'nidoran-f' && data.poke.name !== 'nidoran-m' ? data.poke.name : 'nidoran'}`}>
+                <div className="pokemonCardId">#{data.id}</div>
                 <div className="pokemonCardContent">
                     <div className='pokemonCardImage'>
-                        <img src={pokeInfo.sprites?.front_default}></img>
+                        <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png`}></img>
                     </div>
-                    <div className="pokemonCardTitle">{capFirstLetter(pokeInfo.name)}</div>
+                    <div className="pokemonCardTitle">{capFirstLetter(data.poke.name)}</div>
                 </div>
             </a>
     )
