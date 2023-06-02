@@ -11,7 +11,6 @@ const Item = (data) => {
         return "";
     }
     
-    console.log(data)
 
     return(
             <a className="pokemonCardWrapper" href={`https://www.wikidex.net/wiki/${data.poke.name !== 'nidoran-f' && data.poke.name !== 'nidoran-m' ? data.poke.name : 'nidoran'}`}>
