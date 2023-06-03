@@ -5,7 +5,7 @@ import './CartWidget.css'
 export const CartWidget = () => {
   return (
     <>
-    <div className="logo d-flex ms-2">
+    <div className="logo d-flex ms-2 me-sm-0 justify-content-center">
       <img src="./src/components/CartWidget/assets/img/cart-icon.png" alt="" srcset="" />
       <div className="number-container">
         <div className="number">3
