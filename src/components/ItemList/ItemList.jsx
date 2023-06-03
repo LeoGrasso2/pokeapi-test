@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 import Item from '../Item/Item';
 import './ItemList.css'
+import { Container } from 'react-bootstrap';
 
 
 const ItemList = () => {
@@ -17,7 +18,6 @@ const ItemList = () => {
             catch(err){
                 console.log(err)
             }
-
             
         };
 
@@ -40,9 +40,9 @@ const ItemList = () => {
 
     return (
         <>
-            <div className="itemListContainer">
+            <Container className="itemListContainer">
                 {renderList()}
-            </div>
+            </Container>
         </>
     )
 }

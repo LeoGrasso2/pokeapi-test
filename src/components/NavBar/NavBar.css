@@ -1,0 +1,10 @@
+.navbar {
+  background-color: rgba(182, 72, 72, 0.855);
+}
+.navbar a:hover {
+  border-bottom: 2px solid black;
+  margin-bottom: -2px;
+}
+.navbar img {
+  width: 60px;
+}/*# sourceMappingURL=NavBar.css.map */

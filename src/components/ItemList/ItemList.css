@@ -2,8 +2,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1em 2em;
-  align-content: space-around;
+  align-content: center;
   justify-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  padding: 0;
 }
 @media (max-width: 500px) {
   .itemListContainer {

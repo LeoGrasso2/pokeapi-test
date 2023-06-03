@@ -1,15 +1,17 @@
 import ItemList from './components/ItemList/ItemList'
+import NavBar from './components/NavBar/NavBar';
 import './index.css'
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from 'react-bootstrap';
 function App() {
 
   return (
     <>
-    <div className="appContainer">
-      <h1 className="appTitle">PokéApi Test!</h1>
-      <h6>Made by: <a className='gh-link' href="https://github.com/LeoGrasso2">Leonardo Grasso</a></h6>
+    <Container className="appContainer container-xxl">
+      <NavBar />
       <ItemList />
-    </div>
+      <h6>Made by: <a className='gh-link' href="https://github.com/LeoGrasso2">Leonardo Grasso</a></h6>
+    </Container>
     </>
   )
 }

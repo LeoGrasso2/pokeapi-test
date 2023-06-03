@@ -1,33 +1,42 @@
 .pokemonCardWrapper {
+  background-image: url("../../assets/common.png");
+  background-size: cover;
   display: block;
   transition: 0.2s;
   width: 200px;
   height: 180px;
-  background-color: rgb(255, 133, 133);
   color: black;
-  border-radius: 10px;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  border-radius: 20px;
 }
 .pokemonCardWrapper .pokemonCardId {
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-size: cover;
   padding-top: 10px;
   padding-left: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  text-shadow: 1px 5px 10px rgba(0, 0, 0, 0.582);
+  text-align: center;
 }
 .pokemonCardWrapper .pokemonCardContent {
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .pokemonCardWrapper .pokemonCardContent img {
+  padding-top: 25px;
   width: 125px;
   height: 125px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .pokemonCardWrapper .pokemonCardContent .pokemonCardTitle {
+  font-size: 16px;
+  text-shadow: 1px 5px 10px rgba(0, 0, 0, 0.582);
   padding-bottom: 20px;
 }
 @media (hover: none) {
@@ -35,7 +44,7 @@
     box-shadow: none;
   }
   .pokemonCardWrapper {
-    width: 160px;
+    width: 170px;
   }
 }
 .pokemonCardWrapper:hover {
