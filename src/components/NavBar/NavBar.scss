@@ -1,10 +1,14 @@
 .navbar{
     background-color: rgba(182, 72, 72, 0.855);
-    a:hover{
-        border-bottom: 2px solid black;
-        margin-bottom: -2px;
-    }
     img{
         width: 60px;
     }
+
+    .navbar-nav{
+        a:hover{
+            border-bottom: 2px solid black;
+            margin-bottom: -2px;
+        }
+    }
+    
 }
