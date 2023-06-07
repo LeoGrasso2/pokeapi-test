@@ -1,0 +1,12 @@
+.detailCardWrapper {
+  width: 45rem;
+  background-color: rgba(182, 72, 72, 0.855) !important;
+}
+.detailCardWrapper .detailCardImage {
+  width: 150px;
+}
+
+.detailCardId {
+  color: black;
+  width: 100%;
+}/*# sourceMappingURL=ItemDetail.css.map */

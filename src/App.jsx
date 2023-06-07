@@ -5,7 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 import PokemonPage from './pages/PokemonPage/PokemonPage';
 import HomePage from './pages/HomePage/HomePage'
+import ObjectPage from './pages/ObjectPage/ObjectPage';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import ItemDetail from './components/ItemDetail/ItemDetail';
 
 function App() {
 
@@ -18,8 +20,10 @@ function App() {
           {/* Routes */}
 
           <Routes>
-              <Route path="pokeapi-test/pokemon" element={<PokemonPage />}></Route>
-              <Route path="pokeapi-test/" element={<HomePage />}></Route>
+            <Route path="/" element={<ItemList />}></Route>
+              <Route path="/category/pokemon" element={<PokemonPage />}></Route>
+              <Route path="/category/objects" element={<ObjectPage />}></Route>
+              <Route path="/item/:name/:id" element={<ItemDetail />}></Route>
 
           
           </Routes>
