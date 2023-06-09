@@ -14,4 +14,10 @@
     gap: 0.5em;
     grid-template-columns: repeat(auto-fill, minmax(150px, 0.8fr));
   }
+}
+.itemListContainer .centeredDiv {
+  grid-column: 1/-1; /* Span across all grid columns */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=ItemList.css.map */

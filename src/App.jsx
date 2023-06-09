@@ -3,9 +3,6 @@ import NavBar from './components/NavBar/NavBar';
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
-import PokemonPage from './pages/PokemonPage/PokemonPage';
-import HomePage from './pages/HomePage/HomePage'
-import ObjectPage from './pages/ObjectPage/ObjectPage';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import ItemDetail from './components/ItemDetail/ItemDetail';
 
@@ -20,9 +17,8 @@ function App() {
           {/* Routes */}
 
           <Routes>
-            <Route path="/" element={<ItemList />}></Route>
-              <Route path="/category/pokemon" element={<PokemonPage />}></Route>
-              <Route path="/category/objects" element={<ObjectPage />}></Route>
+            <Route path="/" element={<ItemList id='pokemon'/> }></Route>
+              <Route path="/category/:id" element={<ItemList />}></Route>
               <Route path="/item/:name/:id" element={<ItemDetail />}></Route>
 
           

@@ -1,10 +1,12 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ItemList from '../../components/ItemList/ItemList';
 
 const HomePage = () => {
   return (
-    <div className='d-flex justify-content-center'>HomePage :D</div>
-  )
+    <>
+    </>
+    )
 }
 
 export default HomePage
